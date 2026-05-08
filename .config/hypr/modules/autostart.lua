@@ -1,0 +1,12 @@
+require("env")
+
+hl.on("hyprland.start", function()
+	hl.exec_cmd(terminal)
+	hl.exec_cmd("waybar && awww-daemon && swaync && wofi")
+	hl.exec_cmd("hypridle")
+	hl.exec_cmd("systemctl --user start hyprpolkitagent")
+	hl.exec_cmd("fcitx5")
+	hl.exec_cmd("vicinae server")
+	hl.exec_cmd("cd ~/.local/bin && ./walset.sh /home/annguyen/Pictures/Wallpapers/dark 1800")
+	hl.exec_cmd("snappy-switcher --daemon")
+end)
