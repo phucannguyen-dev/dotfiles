@@ -3,9 +3,8 @@
   "margin-bottom": 0,
 
   "modules-left": [
-    //"temperature",
-    //"hyprland/workspaces",
-    "bluetooth"
+    "group/system",
+    "custom/weather",
   ],
   "modules-center": [
     "clock",
@@ -15,7 +14,6 @@
     "pulseaudio",
     "network",
     "battery", 
-    "power-profiles-daemon",
     "custom/notification"
   ],
 
@@ -113,6 +111,32 @@
       "balanced": "",
       "power-saver": ""
     }
+  },
+
+  "group/system": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500
+    },
+    "modules": [
+      "custom/sysinfo",
+      "bluetooth",
+      "power-profiles-daemon"
+    ]
+  },
+
+  "custom/sysinfo": {
+    "format": "",
+    "tooltip": "false",
+    "on-click": "fastfetch",
+  },
+
+  "custom/weather": {
+    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh HoChiMinh+Vietnam",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 3600
   },
 
   "custom/notification": {

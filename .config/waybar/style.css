@@ -79,6 +79,8 @@ tooltip label {
 #memory,
 #bluetooth,
 #power-profiles-daemon,
+#custom-sysinfo,
+#custom-weather,
 #custom-notification {
   background-color: @bg0;
   padding: 0 15px 0 15px;
@@ -129,4 +131,8 @@ tooltip label {
 
 #power-profiles-daemon.balanced {
   color: @fg;
+}
+
+#custom-sysinfo {
+  color: @blue;
 }
