@@ -1,0 +1,26 @@
+/* Catppuccin Latte — Official Palette */
+/* Source: https://catppuccin.com/palette/ */
+/* "Soothing pastel theme for the high-spirited!" */
+
+/* ── Backgrounds ─────────────────────────────────────── */
+@define-color bg0 #dce0e8;  /* Crust  */
+@define-color bg1 #e6e9ef;  /* Mantle */
+@define-color bg2 #eff1f5;  /* Base   */
+@define-color bg3 #ccd0da;  /* Surface0 */
+
+/* ── Accent colors ───────────────────────────────────── */
+@define-color red    #d20f39;  /* Red    */
+@define-color pink   #ea76cb;  /* Pink   */
+@define-color yellow #df8e1d;  /* Yellow */
+@define-color green  #40a02b;  /* Green  */
+@define-color teal   #179299;  /* Teal   */
+@define-color blue   #1e66f5;  /* Blue   */
+@define-color purple #8839ef;  /* Mauve  */
+
+/* ── Foreground ──────────────────────────────────────── */
+@define-color fg #4c4f69;  /* Text */
+
+/* ── Greys ───────────────────────────────────────────── */
+@define-color grey0 #ccd0da;  /* Surface0  */
+@define-color grey1 #8c8fa1;  /* Overlay1  */
+@define-color grey2 #7c7f93;  /* Overlay0  */

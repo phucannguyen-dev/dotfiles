@@ -1,0 +1,26 @@
+/* Catppuccin Mocha — Official Palette */
+/* Source: https://catppuccin.com/palette/ */
+/* "The Original — Our darkest variant offering a cozy feeling with color-rich accents." */
+
+/* ── Backgrounds ─────────────────────────────────────── */
+@define-color bg0 #11111b;
+@define-color bg1 #181825;
+@define-color bg2 #1e1e2e;
+@define-color bg3 #313244;
+
+/* ── Accent colors ───────────────────────────────────── */
+@define-color red #f38ba8;
+@define-color pink #f5c2e7;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color blue #89b4fa;
+@define-color purple #cba6f7;
+
+/* ── Foreground ──────────────────────────────────────── */
+@define-color fg #cdd6f4;
+
+/* ── Greys ───────────────────────────────────────────── */
+@define-color grey0 #313244;
+@define-color grey1 #9399b2;
+@define-color grey2 #bac2de;
