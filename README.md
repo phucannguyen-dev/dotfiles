@@ -1,15 +1,18 @@
-# DOTFILES
+# dotfiles 
+
 *My personal configurations*
 
 > Go to `https://terminaltrove.com/` to find more terminal tools.
 
+> (*) mean having configs.
+
 ## CLI / TUI
 
-- hermes agent
-- pi agent
+- hermes agent*
+- pi agent*
 - linecast
 - android-platform-tools
-- tinycast
+- tinycast*
 - thock
 - bat
 - btop
@@ -21,8 +24,12 @@
 - python
 - mosh
 - mole
-- neovim
-- tmux
+- neovim*
+- tmux*
+
+## Services
+
+- 9Router*
 
 ## Skills
 
@@ -39,5 +46,5 @@
 
 ## Appearance
 
-- zsh + oh my zsh
-- starship
+- zsh + oh my zsh*
+- starship*
