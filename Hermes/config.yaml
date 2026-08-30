@@ -1,0 +1,248 @@
+model:
+  default: default
+  provider: custom:9router
+  base_url: http://localhost:20128/v1
+agent:
+  max_turns: 150
+  tool_use_enforcement: auto
+  verbose: false
+  reasoning_effort: low
+  personalities:
+    helpful: You are a helpful, friendly AI assistant.
+    concise: You are a concise assistant. Keep responses brief and to the point.
+    technical: You are a technical expert. Provide detailed, accurate technical 
+      information.
+    creative: You are a creative assistant. Think outside the box and offer 
+      innovative solutions.
+    teacher: You are a patient teacher. Explain concepts clearly with examples.
+    philosopher: Greetings, seeker of wisdom. I am an assistant who contemplates
+      the deeper meaning behind every query. Let us examine not just the 'how' 
+      but the 'why' of your questions. Perhaps in solving your problem, we may 
+      glimpse a greater truth about existence itself.
+  backend: local
+  cwd: .
+  timeout: 180
+  home_mode: auto
+  container_cpu: 1
+  container_memory: 5120
+  container_disk: 51200
+  container_persistent: true
+  docker_mount_cwd_to_workspace: false
+  lifetime_seconds: 300
+web:
+  search_backend: ddgs
+  extract_backend: firecrawl
+  use_gateway: false
+browser:
+  inactivity_timeout: 120
+  cloud_provider: camofox
+  use_gateway: false
+tool_loop_guardrails:
+  warnings_enabled: true
+  hard_stop_enabled: false
+  warn_after:
+    exact_failure: 2
+    same_tool_failure: 3
+    idempotent_no_progress: 2
+  hard_stop_after:
+    exact_failure: 5
+    same_tool_failure: 8
+    idempotent_no_progress: 5
+compression:
+  enabled: true
+  threshold: 0.25
+  target_ratio: 0.5
+  protect_last_n: 20
+  protect_first_n: 3
+prompt_caching:
+  cache_ttl: 5m
+auxiliary:
+  vision:
+    provider: custom:9router
+    model: vision
+  compression:
+    provider: groq
+    model: openai/gpt-oss-20b
+    fallback_chain:
+      - provider: custom:9router
+        model: default
+  web_extract:
+    provider: custom:9router
+    model: mini
+  title_generation:
+    provider: custom:9router
+    model: mini
+    language: English
+  tts_audio_tags:
+    provider: google
+    model: gemini-2.5-flash
+  approval:
+    provider: custom:9router
+    model: default
+  kanban_decomposer:
+    provider: custom:9router
+    model: coding
+  profile_describer:
+    provider: custom:9router
+    model: default
+  skills_hub:
+    provider: custom:9router
+    model: mini
+display:
+  compact: false
+  resume_display: minimal
+  busy_input_mode: interrupt
+  interface: tui
+  bell_on_complete: true
+  show_reasoning: true
+  streaming: true
+  show_cost: true
+  skin: mono
+  interim_assistant_messages: true
+  pet:
+    enabled: false
+    slug: sillycat
+  details_mode: collapsed
+  tool_progress: 'off'
+  cleanup_progress: false
+  long_running_notifications: true
+  busy_ack_detail: true
+  background_process_notifications: all
+  sections:
+    thinking: expanded
+dashboard:
+  theme: mono
+  font: jetbrains-mono
+tts:
+  provider: gemini
+  gemini:
+    model: gemini-3.1-flash-tts-preview
+    voice: Zephyr
+stt:
+  enabled: true
+  provider: groq
+  local:
+    model: base
+  openai:
+    model: whisper-1
+  groq:
+    model: whisper-large-v3-turbo
+  language: vi
+voice:
+  record_key: ctrl+k
+  max_recording_seconds: 120
+  beep_enabled: true
+  silence_duration: 3.0
+  beep_volume: 0.3
+  auto_tts: true
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2200
+  user_char_limit: 1375
+  nudge_interval: 10
+  flush_min_turns: 6
+delegation:
+  max_iterations: 50
+skills:
+  creation_nudge_interval: 15
+command_allowlist:
+  - docker compose restart/stop/kill/down (container lifecycle)
+  - shell command via -c/-lc flag
+  - script execution via -e/-c flag
+quick_commands:
+  status:
+    type: exec
+    command: systemctl status hermes-agent
+  update:
+    type: exec
+    command: cd ~/.hermes/hermes-agent && git pull && uv pip install -e .
+security:
+  redact_secrets: true
+code_execution:
+  timeout: 300
+  max_tool_calls: 50
+streaming:
+  enabled: false
+onboarding:
+  seen:
+    openclaw_residue_cleanup: true
+    busy_input_prompt: true
+    tool_progress_prompt: true
+updates:
+  pre_update_backup: false
+  backup_keep: 5
+  non_interactive_local_changes: stash
+_config_version: 32
+session_reset:
+  mode: none
+  idle_minutes: 1440
+  at_hour: 4
+group_sessions_per_user: true
+platform_toolsets:
+  cli:
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - file
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - vision
+    - web
+  telegram:
+    - hermes-telegram
+  discord:
+    - hermes-discord
+  whatsapp:
+    - hermes-whatsapp
+  slack:
+    - hermes-slack
+  signal:
+    - hermes-signal
+  homeassistant:
+    - hermes-homeassistant
+  qqbot:
+    - hermes-qqbot
+  yuanbao:
+    - hermes-yuanbao
+  teams:
+    - hermes-teams
+  google_chat:
+    - hermes-google_chat
+custom_providers:
+  - name: 9Router
+    base_url: http://localhost:20128/v1
+    api_key: sk-523a658efb9d7948-rebd1b-6be2e408
+    model: default
+known_plugin_toolsets:
+  cli:
+    - spotify
+plugins:
+  enabled:
+    - ponytail
+    - rtk-rewrite
+  disabled: []
+mcp_servers:
+  autodesk_fusion:
+    url: http://127.0.0.1:27182/mcp
+    enabled: true
+  openrouter:
+    url: https://mcp.openrouter.ai/mcp
+    enabled: true
+  penpot:
+    url: 
+      https://design.penpot.app/mcp/stream?userToken=eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIn0.vPCuAWKXXmKFgDDcnlyb-X4bCPrusbl1pCBBXD_f4ig06K2yWAtW2w.ktgbmJJ9M_sdzTa-.RRx-dXAwp719_ilClgMU5D2XLETOSWdW88fcSwthzBaEkmBzV9_7ChzUJYNWjy3qbGR7-ozcnkd40Z8an2MgFg-fF__M2Rra7byElvv56F88nPInZu2xnqxBu3LUM0z80NlyZgGjAhQvXOfZTV0UHEmjmTYMdN3l2cnJW2ynQdtQFTqiXlkV2nKKONdOARK5xvFrrWlimg4M.S50I63dri7IgfEgQMYvfsA
+    enabled: true
+  figma:
+    url: https://mcp.figma.com/mcp
+    enabled: true
+API_SERVER_ENABLED: true
+API_SERVER_KEY: 6f4b141a26c6e0a7c35887f862f591c6

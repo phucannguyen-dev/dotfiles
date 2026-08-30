@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Email",
+    "text": "phucan2901@gmail.com",
+    "keyword": "p@a",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "name": "An-server",
+    "text": "an-server.note-marlin.ts.net",
+    "keyword": "ansv"
+  },
+  {
+    "name": "Knowledge Vault",
+    "text": "/Users/annguyen/Library/Mobile\\ Documents/com~apple~CloudDocs/Obsidian/Knowledge",
+    "keyword": "!obk",
+    "tags": [
+      "obsidian"
+    ]
+  },
+  {
+    "name": "smarteyeware",
+    "text": "smarteyeware",
+    "keyword": "sme"
+  },
+  {
+    "name": "smarteyeware calling",
+    "text": "curl -X POST \"http://localhost:8000/ask\" \\\n-H \"X-Device-Token: 551351ba2b576c2e8fb4358dd92217e0\" \\\n-F \"audio=@{argument name=\"Audio\"}.wav\" \\\n-F \"frames=@{argument name=\"Image\"}\" \\\n--output {argument name=\"Output\"}.wav",
+    "keyword": "!sewc",
+    "tags": [
+      "api"
+    ]
+  },
+  {
+    "name": "JSON Beautify",
+    "text": "data:text/html,<script>document.write(JSON.stringify({argument name=\"JSON\"}, null, 2))</script>"
+  },
+  {
+    "name": "list disks",
+    "text": "sudo lsblk -f",
+    "tags": [
+      "linux",
+      "storage"
+    ]
+  },
+  {
+    "name": "docker env",
+    "text": "SERVICE=\nSERVICE_PORT=\nIMAGE_URL=\n\nTAILSCALE_OAUTH_CLIENT_ID=kMKV6KsKRB11CNTRL\nTAILSCALE_OAUTH_CLIENT_SECRET=tskey-client-kMKV6KsKRB11CNTRL-WjwyZJTQ1RJEK83tKrz9QJcW77sVbRsx\n\nTZ=Asia/Ho_Chi_Minh\n",
+    "tags": [
+      "docker"
+    ]
+  },
+  {
+    "name": "docker template",
+    "text": "services:\n  docktail:\n    image: ghcr.io/marvinvr/docktail:latest\n    restart: unless-stopped\n    volumes:\n      - /var/run/docker.sock:/var/run/docker.sock:ro\n      - /var/run/tailscale:/var/run/tailscale\n    environment:\n      - TAILSCALE_OAUTH_CLIENT_ID=${TAILSCALE_OAUTH_CLIENT_ID}\n      - TAILSCALE_OAUTH_CLIENT_SECRET=${TAILSCALE_OAUTH_CLIENT_SECRET}\n\n  # ${SERVICE}\n  application:\n    image: ${IMAGE_URL}\n    container_name: ${SERVICE}\n    labels:\n      - \"docktail.service.enable=true\"\n      - \"docktail.service.name=myapp\"\n      - \"docktail.service.port=${SERVICE_PORT}\"\n      - \"docktail.service.description=Bookmark Manager\" # if needed\n      - \"docktail.service.service-port=443\"\n    restart: unless-stopped",
+    "tags": [
+      "docker"
+    ]
+  },
+  {
+    "name": "docker compose",
+    "text": "docker compose",
+    "keyword": "!dcc"
+  },
+  {
+    "name": "docker compose file",
+    "text": "docker-compose.yml",
+    "keyword": "!dcf"
+  },
+  {
+    "name": "systemctl",
+    "text": "sudo systemctl {argument name=\"Mode\"} {cursor}",
+    "keyword": "sysctl",
+    "tags": [
+      "daemon",
+      "system"
+    ]
+  },
+  {
+    "name": "DC up",
+    "text": "docker compose up",
+    "keyword": "dcu",
+    "tags": [
+      "docker"
+    ]
+  },
+  {
+    "name": "Tmux New",
+    "text": "tmux new -s ",
+    "keyword": "!txn"
+  },
+  {
+    "name": "tmux attach",
+    "text": "tmux a -t ",
+    "keyword": "!txa",
+    "tags": [
+      "cli"
+    ]
+  },
+  {
+    "name": "Tmux Kill",
+    "text": "tmux kill-session -t ",
+    "keyword": "!txk"
+  },
+  {
+    "name": "Knowledge Vault",
+    "text": "/Users/annguyen/Library/Mobile\\ Documents/com~apple~CloudDocs/Obsidian/Knowledge",
+    "keyword": "!kv"
+  },
+  {
+    "name": "9Router pm2",
+    "text": "# View logs  \npm2 logs 9router\n\n# Restart application  \npm2 restart 9router  \n\n# Stop application  \npm2 stop 9router  \n\n# View status  \npm2 status \n\n# Monitor resources  \npm2 monit",
+    "tags": [
+      "9router",
+      "autostart",
+      "cli",
+      "pm2"
+    ]
+  },
+  {
+    "name": "Image Grid",
+    "text": "```image-grid\ncolumns: {argument name=\"Columns\"}\n{cursor}\n```",
+    "keyword": "!imgr",
+    "tags": [
+      "image",
+      "layout"
+    ]
+  },
+  {
+    "name": "Alpha",
+    "text": "𝜶",
+    "keyword": "!alpha"
+  },
+  {
+    "name": "Skull emoji",
+    "text": "💀",
+    "keyword": "!k"
+  },
+  {
+    "name": "Python3",
+    "text": "python3 ",
+    "keyword": "py3",
+    "tags": [
+      "cli",
+      "dev",
+      "python"
+    ]
+  },
+  {
+    "name": "JS Placeholder",
+    "text": "${{cursor}}",
+    "keyword": "s{",
+    "tags": [
+      "javascript"
+    ]
+  },
+  {
+    "name": "className",
+    "text": "className=\"{cursor}\"",
+    "keyword": "clsn",
+    "tags": [
+      "dev",
+      "react"
+    ]
+  },
+  {
+    "name": "Clear quarantine",
+    "text": "xattr -cr ",
+    "keyword": "!crack"
+  },
+  {
+    "name": "Trademark",
+    "text": "™",
+    "keyword": "!tm"
+  },
+  {
+    "name": "Tmux List",
+    "text": "tmux ls",
+    "keyword": "!txls"
+  },
+  {
+    "name": "Small Omega",
+    "text": "ω",
+    "keyword": "!somega"
+  },
+  {
+    "name": "Micro",
+    "text": "µ",
+    "keyword": "!micro"
+  },
+  {
+    "name": "Latin P",
+    "text": "𝓟",
+    "keyword": "!P"
+  },
+  {
+    "name": "Sigma",
+    "text": "∑",
+    "keyword": "!sig"
+  },
+  {
+    "name": "Neovim init.lua",
+    "text": "nvim ~/.config/nvim/init.lua",
+    "keyword": "!nvc"
+  },
+  {
+    "name": "Registered",
+    "text": "®",
+    "keyword": "!rgist"
+  },
+  {
+    "name": "Home address",
+    "text": "25/11/31 Bùi Quang Là, phường An Hội Tây, Thành phố Hồ Chí Minh",
+    "keyword": "!homeaddress"
+  }
+]

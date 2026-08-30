@@ -1,0 +1,99 @@
+[
+  {
+    "name": "Macked",
+    "link": "https://macked.app/?s={argument name=\"App\"}",
+    "icon": "default",
+    "tags": [
+      "apps"
+    ]
+  },
+  {
+    "name": "Reddit",
+    "link": "https://www.reddit.com/search/?q={argument name=\"Search\"}",
+    "icon": "default"
+  },
+  {
+    "name": "Chrome Web Store",
+    "link": "https://chromewebstore.google.com/search/{argument name=\"Extension\"}",
+    "icon": "default"
+  },
+  {
+    "name": "AlternativeTo",
+    "link": "https://alternativeto.net/browse/search/?q={argument name=\"software\"}",
+    "icon": "default",
+    "tags": [
+      "lookup",
+      "software"
+    ]
+  },
+  {
+    "name": "Watch Later",
+    "link": "https://www.youtube.com/playlist?list=WL",
+    "icon": "default",
+    "tags": [
+      "youtube"
+    ]
+  },
+  {
+    "name": "Obsidian Plugins",
+    "link": "https://community.obsidian.md/search?q={argument name=\"Plugin name\"}",
+    "icon": "default"
+  },
+  {
+    "name": "Webpage to Markdown",
+    "link": "defuddle.md/{argument name=\"Article\"}",
+    "icon": "paperclip",
+    "tags": [
+      "article"
+    ]
+  },
+  {
+    "name": "BCDCNT",
+    "link": "https://bcdcnt.net/tim-kiem?q={argument name=\"Music\"}",
+    "icon": "default",
+    "tags": [
+      "music"
+    ]
+  },
+  {
+    "name": "Lofi Girl",
+    "link": "https://music.apple.com/vn/playlist/lofi-girl-beats-to-relax-study-to/pl.bf7a3cbca49644d8a33f09c1285aef5c",
+    "icon": "default",
+    "tags": [
+      "music"
+    ]
+  },
+  {
+    "name": "Search Google",
+    "link": "https://google.com/search?q={argument}",
+    "icon": "link"
+  },
+  {
+    "name": "Developer",
+    "link": "/Users/annguyen/Developer",
+    "icon": "default",
+    "tags": [
+      "dev",
+      "folder"
+    ]
+  },
+  {
+    "name": "Design",
+    "link": "/Users/annguyen/Design",
+    "icon": "default",
+    "tags": [
+      "design",
+      "folder"
+    ]
+  },
+  {
+    "name": "Search Wikipedia",
+    "link": "https://vi.wikipedia.org/w/index.php?search={argument}",
+    "icon": "link"
+  },
+  {
+    "name": "Search DuckDuckGo",
+    "link": "https://duckduckgo.com/?q={argument}",
+    "icon": "link"
+  }
+]
